@@ -1,0 +1,19 @@
+[versions]
+kafka = "3.8.1"
+shadow = "9.0.0-beta4"
+slf4j = "2.0.16"
+apacheHttp = "5.4.1"
+junit = "5.11.3"
+hamcrest = "3.0"
+
+[libraries]
+kafkaClients = { group = "org.apache.kafka", name = "kafka-clients", version.ref = "kafka" }
+kafkaStreamTestUtils = { group = "org.apache.kafka", name = "kafka-streams-test-utils", version.ref = "kafka" }
+slf4j = { group = "org.slf4j", name = "slf4j-simple", version.ref = "slf4j" }
+apacheHttp = { group = "org.apache.httpcomponents.client5", name = "httpclient5", version.ref = "apacheHttp" }
+junitApi = { group = "org.junit.jupiter", name = "junit-jupiter-api", version.ref = "junit" }
+junitEngine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version.ref = "junit" }
+hamcrest = { group = "org.hamcrest", name = "hamcrest", version.ref = "hamcrest" }
+
+[plugins]
+shadowPlugin = { id = "com.gradleup.shadow", version.ref = "shadow" }
